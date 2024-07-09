@@ -1,0 +1,36 @@
+{% extends 'base.html' %}
+
+{% block title %}
+Contact Us
+{% endblock title %}
+
+{% block body %}
+<div class="container mt-5">
+    <img src="https://t3.ftcdn.net/jpg/04/81/31/66/360_F_481316696_cPzBNRfqMpbq2cx2soWytWAjhzZYByS4.jpg" class="img-fluid mb-4" alt="Contact Us" style="height: 300px; width: 100%;">
+    <h1>Contact Us</h1>
+    <form id="contactForm" method="post" action="/contact/">
+        {% csrf_token %}
+        <div class="row mb-3">
+            <div class="col">
+                <label for="Name" class="form-label">Name</label>
+                <input type="text" class="form-control" id="Name" name="name" placeholder="Name" required>
+            </div>
+        </div>
+        <div class="mb-3">
+            <label for="email" class="form-label">Email address</label>
+            <input type="email" class="form-control" id="email" name="email" placeholder="name@example.com" required>
+        </div>
+        <div class="mb-3">
+            <label for="phoneNumber" class="form-label">Phone No.</label>
+            <input type="tel" class="form-control" id="phoneNumber" name="phone" placeholder="Phone number" required>
+        </div>
+        <div class="mb-3">
+            <label for="address" class="form-label">Address</label>
+            <textarea class="form-control" id="address" name="add" rows="3" placeholder="Your address" required></textarea>
+        </div>
+        <div class="mb-3">
+            <button type="submit" class="btn btn-primary">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock body %}

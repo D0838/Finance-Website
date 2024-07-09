@@ -1,0 +1,86 @@
+{% extends 'base.html' %}
+{% block title %}Home{% endblock title %}
+
+{% block body %}
+<style>
+  .carousel-item img {
+    height: 370px;
+    margin: 20px auto;
+    object-fit: cover;
+    border-radius: 10px;
+    max-width: 100%; /* Added for responsiveness */
+  }
+  .carousel-caption {
+    background: rgba(0, 0, 0, 0.5);
+    padding: 10px;
+    border-radius: 5px;
+    color: #fff;
+  }
+  .mission-vision h5 {
+    margin-top: 20px;
+    font-weight: bold;
+  }
+  .mission-vision p {
+    margin: 15px 0;
+    font-size: 1.1em;
+  }
+  .header-title {
+    text-align: center;
+    margin-top: 40px;
+    font-size: 2.5em;
+    color: #333;
+  }
+  .header-subtitle {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    color: #6c757d;
+  }
+  .container h5 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+</style>
+
+<div class="container mt-4">
+  <div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+    <div class="carousel-indicators">
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="3" aria-label="Slide 4"></button> 
+    </div>
+    <div class="carousel-inner">
+      <div class="carousel-item active" data-bs-interval="5000">
+        <img src="https://img.freepik.com/free-photo/investment-business-budget-credit-costs-concept_53876-125635.jpg" class="d-block w-50%" alt="Interest rate and dividend concept">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="https://thumbs.dreamstime.com/b/businessman-using-tablet-analyzing-sales-data-economic-growth-graph-chart-business-strategy-abstract-icon-digital-marketing-148213923.jpg" class="d-block w-50%" alt="Economic growth analytics">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="https://www.kredx.com/blog/wp-content/uploads/2023/06/blog-cre.png" class="d-block w-50%" alt="Financial illustration set">
+      </div>
+      <div class="carousel-item" data-bs-interval="5000">
+        <img src="https://cdn.corporatefinanceinstitute.com/assets/investment-value.jpeg" class="d-block w-50%" alt="Investment Value">
+      </div>
+    </div>
+    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+      <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Previous</span>
+    </button>
+    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+      <span class="carousel-control-next-icon" aria-hidden="true"></span>
+      <span class="visually-hidden">Next</span>
+    </button>
+  </div>
+</div>
+
+<div class="text-center mt-5">
+  <h1 class="header-title">Welcome to Finance-Website!</h1>
+  <h5 class="header-subtitle">Your Partner in Financial Success</h5>
+  <p class="header-subtitle">
+    We are a team of dedicated financial professionals committed to helping you achieve your financial goals. With years of experience and a client-first approach, we provide personalized financial strategies to secure your future.
+  </p>
+</div>
+
+{% endblock body %}
